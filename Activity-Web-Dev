@@ -35,4 +35,20 @@ It was popularised in the 1960s with the release of Letraset sheets containing L
 	5 <a href="https://basic1.html">go to page1</a>
 	
 	
+	30-08-18
+	comment- ctrl /,uncomment -ctrl/ 
+	<table>
+	      <thead>
+	      <tr>
+	          <th></th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr>
+	          <td></td>
+	      </tr>
+	      </tbody>
+	</table>
+	
+	
 	
