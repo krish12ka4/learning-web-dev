@@ -59,8 +59,244 @@ It was popularised in the 1960s with the release of Letraset sheets containing L
 	www.colours neilorangepeel.com
 	www.colorpicker.com
 	
+	06-09-2018
+	----------
+The 30 CSS Selectors You Must Memorize
+
+I. *
+
+1 * {
+2  margin: 0;
+3 padding: 0;
+4  }
+
+II. #X
+
+1 #container {
+2   width: 960px;
+3  margin: auto;
+4  }
+
+III.  .X
 	
+1 .error {
+2  color: red;
+3  }
+
+IV.XY
 	
+1 li a {
+2 text-decoration: none;
+3 }
+
+V. X	
+
+1 a { color: red; }
+2 ul { margin-left: 0; }
+
+VI. X:visited and X:link
 	
+1 a:link { color: red; }
+2 a:visted { color: purple; }
+
+ VII. X + Y
+
+1 ul + p {
+2   color: red;
+3 }
+
+VIII. X > Y
 	
+1 div#container > ul {
+2  border: 1px solid black;
+3 }
+
+example:
 	
+<div id="container">
+   <ul>
+      <li> List Item
+        <ul>
+           <li> Child </li>
+        </ul>
+      </li>
+      <li> List Item </li>
+      <li> List Item </li>
+      <li> List Item </li>
+   </ul>
+</div>
+
+
+IX. X ~ Y
+	
+1 ul ~ p {
+2 color: red;
+3 }
+   
+X).  X[title]
+	
+1 a[title] {
+2  color: green;
+3 }
+
+XI. X[href="foo"]
+	
+1 a[href="http://net.tutsplus.com"] {
+2  color: #1f6053; /* nettuts green */
+3 }
+
+XII. X[href*="nettuts"]
+	
+1 a[href*="tuts"] {
+2 color: #1f6053; /* nettuts green */
+3 }
+
+XIII. X[href^="http"]
+	
+1 a[href^="http"] {
+2   background: url(path/to/external/icon.png) no-repeat;
+3   padding-left: 10px;
+4 }
+
+XIV. 14. X[href$=".jpg"]
+	
+1 a[href$=".jpg"] {
+2   color: red;
+3 }
+
+XV. X[data-*="foo"]
+	
+1 a[data-filetype="image"] {
+2   color: red;
+3 }
+
+Reference : 
+	
+a[href$=".jpg"],
+a[href$=".jpeg"],
+a[href$=".png"],
+a[href$=".gif"] {
+   color: red;
+}
+
+XVI. X[foo~="bar"]
+
+	
+1 a[data-info~="external"] {
+2   color: red;
+3 }
+4 
+5 a[data-info~="image"] {
+6   border: 1px solid black;
+7 }
+
+XVII. X:checked
+	
+1 input[type=radio]:checked {
+2   border: 1px solid black;
+3 }
+
+XVIII. 18. X:after
+
+The before and after pseudo classes kick butt. Every day, it seems, people are finding new and creative ways to use them effectively. They simply generate content around the selected element.
+
+Many were first introduced to these classes when they encountered the clear-fix hack.
+
+	
+1 .clearfix:after {
+2    content: "";
+3    display: block;
+4    clear: both;
+5    visibility: hidden;
+6    font-size: 0;
+7   height: 0;
+8    }
+9 
+10 .clearfix { 
+11  *display: inline-block; 
+12   _height: 1%;
+13 }
+
+XIX.  X:hover
+	
+1 div:hover {
+2  background: #e3e3e3;
+3 }
+Example:
+	
+a:hover {
+ border-bottom: 1px solid black;
+}
+
+
+XX.  X:not(selector)
+	
+1 div:not(#container) {
+2   color: blue;
+3 }
+
+The negation pseudo class is particularly helpful. Let's say I want to select all divs, except for the one which has an id of container. The snippet above will handle that task perfectly.
+
+Or, if I wanted to select every single element (not advised) except for paragraph tags, we could do:
+	
+1 *:not(p) {
+2  color: green;
+3 }
+
+XXI. X::pseudoElement
+	
+1 p::first-line {
+2   font-weight: bold;
+3   font-size: 1.2em;
+4 }
+
+We can use pseudo elements (designated by ::) to style fragments of an element, such as the first line, or the first letter. Keep in mind that these must be applied to block level elements in order to take effect.
+
+    A pseudo-element is composed of two colons: ::
+
+Target the First Letter of a Paragraph
+	
+1 p::first-letter {
+2   float: left;
+3   font-size: 2em;
+4   font-weight: bold;
+5   font-family: cursive;
+6   padding-right: 2px;
+7 }
+
+This snippet is an abstraction that will find all paragraphs on the page, and then sub-target only the first letter of that element.
+
+This is most often used to create newspaper-like styling for the first-letter of an article.
+Target the First Line of a Paragraph
+	
+1 p::first-line {
+2   font-weight: bold;
+3   font-size: 1.2em;
+4 }
+
+ XXII. X:nth-child(n)
+	
+1 li:nth-child(3) {
+2   color: red;
+3 }
+
+XXIII. X:nth-last-child(n)
+	
+1 li:nth-last-child(2) {
+2   color: red;
+3 }
+
+XXIV. X:nth-of-type(n)
+	
+1 ul:nth-of-type(3) {
+2   border: 1px solid black;
+3 }
+
+XXV. 25. X:nth-last-of-type(n)
+	
+ul:nth-last-of-type(3) {
+   border: 1px solid black;
+}
+
+
+
