@@ -299,7 +299,7 @@ ul:nth-last-of-type(3) {
 }
 
 14-09-18
-Text and Font lesson
+Text and Font lesson:
 font-family
 font-Size
 font-weight
@@ -310,3 +310,20 @@ text-decoration
 Bacon ipsum google search
 css font stack google search
 
+13-10-18
+Lesson 69
+CSS Blog From Scratch Exercise solution Pt.3:
+--> Google fonts google search
+<div class="post">
+<div class="date"> november 11 2013</div>
+<p class="quote">
+</div>
+<hr>
+Css
+body{}
+.date
+.post
+.quote
+h2
+hr
+hr style css google search
